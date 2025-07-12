@@ -1,0 +1,194 @@
+/* বডি ও স্ক্রল smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #ff004f, #00fff7);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* ইউনিক ডিজিটাল স্টাইল হেডার */
+.shop-header {
+  background: linear-gradient(135deg, #00fff7, #ff004f);
+  padding: 20px 15px; /* একটু কম প্যাডিং */
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 25px;
+  box-shadow:
+    0 0 15px rgba(255, 0, 79, 0.6),
+    0 0 30px rgba(0, 255, 247, 0.6),
+    0 10px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glowing animated border */
+.shop-header::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  border-radius: 30px;
+  background: linear-gradient(270deg, #00fff7, #ff004f, #00fff7);
+  background-size: 600% 600%;
+  animation: glowGradient 8s ease infinite;
+  z-index: 0;
+  filter: blur(10px);
+  opacity: 0.7;
+}
+
+@keyframes glowGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* দোকানের নাম */
+.shop-header h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 22px; /* একটু ছোট করা */
+  font-weight: 400; /* হালকা */
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow:
+    0 0 8px #ff004f,
+    0 0 15px #00fff7;
+  margin-bottom: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* tagline */
+.shop-header p {
+  position: relative;
+  z-index: 1;
+  font-size: 14px; /* হালকা ছোট */
+  font-weight: 300;
+  color: #e0f7facc;
+  text-shadow: 0 0 4px #00fff7;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+/* মিষ্টির লিস্ট গ্রিড: ২ কলাম */
+#sweet-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ২ কলাম */
+  gap: 20px;
+  max-width: 700px; /* একটু ছোট */
+  margin: 40px auto;
+}
+
+/* মিষ্টির কার্ড ডিজাইন */
+.sweet-card {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.sweet-card:hover {
+  transform: scale(1.03);
+}
+
+/* মিষ্টির ছবি */
+.sweet-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* মিষ্টির নাম */
+.sweet-card h2 {
+  margin: 10px 0 5px;
+}
+
+/* প্রাইসের জন্য RGB ডিজিটাল স্টাইল */
+.sweet-card p {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 0, 0); /* bright red */
+  text-shadow:
+    0 0 3px rgb(255, 0, 0),
+    0 0 5px rgb(255, 0, 0),
+    0 0 10px rgb(255, 100, 100);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* অর্ডার বাটন */
+.order-btn {
+  background-color: #00ffae;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.order-btn:hover {
+  background-color: #00c28f;
+}
+.footer {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column; /* একের পর এক বসাবে */
+  align-items: center; /* সবকিছু center */
+  text-align: center;
+  gap: 15px;
+}
+
+.owner-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.owner-info img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #00fff7;
+  object-fit: cover;
+}
+
+.owner-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #ffcc00;
+}
+
+.owner-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #ffffffcc;
+}
+
+.dev-info {
+  font-size: 13px;
+  color: #ffffffa0;
+}
+
+.dev-info a {
+  color: #00fff7;
+  text-decoration: none;
+}
+
+.dev-info a:hover {
+  text-decoration: underline;
+}
